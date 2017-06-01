@@ -2,7 +2,7 @@
 
 public class PlayerCharacter : Character
 {
-    protected override void Kill(Damage damage)
+    public override void Kill(Damage damage)
     {
         base.Kill(damage);
         Destroy(gameObject);

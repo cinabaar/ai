@@ -4,7 +4,7 @@ public class EnemyCharacter : Character
 {
     public GameObject SpawnOnDeath;
 
-    protected override void Kill(Damage damage)
+    public override void Kill(Damage damage)
     {
         base.Kill(damage);
         Destroy(gameObject);

@@ -22,7 +22,7 @@ public class GrenadeDamage : MonoBehaviour
     private IEnumerator ExplodeAfterSeconds(float time)
     {
         yield return new WaitForSeconds(time);
-        var explosion = Instantiate(_explosion.gameObject, transform.position + _explosion.transform.position, _explosion.transform.rotation);
+        var explosion = Instantiate(_explosion.gameObject, transform.position + _explosion.transform.position, Quaternion.identity);
         explosion.GetComponent<ParticleSystem>().Play();
         var colliders = Physics.OverlapSphere(transform.position, _damageRadius);
         var affectedObjects = new List<ITakeDamage>();

@@ -33,7 +33,7 @@ public class Character : MonoBehaviour, ITakeDamage, IHaveTeam
         }
     }
 
-    protected virtual void Kill(Damage damage)
+    public virtual void Kill(Damage damage)
     {
         if (OnKilled != null)
         {

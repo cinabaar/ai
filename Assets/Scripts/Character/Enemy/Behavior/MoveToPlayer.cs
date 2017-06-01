@@ -9,6 +9,8 @@ public class MoveToPlayer
         Vector3 previousTargetPosition = new Vector3(float.PositiveInfinity, float.PositiveInfinity);
         while (true)
         {
+            if (target == null)
+                break;
             // did target move more than at least a minimum amount since last destination set?
             if (Vector3.SqrMagnitude(previousTargetPosition - target.position) > 0.1f)
             {
